@@ -1,0 +1,34 @@
+{
+  "name": "ikwin-service-manager",
+  "version": "1.0.0",
+  "description": "IKWIN service manager.",
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/ikwin-service-manager.js",
+  "scripts": {
+    "build": "npm run prepublish",
+    "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "test": "npm run build && mocha test/ikwin-service-manager.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appmux/ikwin-service-manager.git"
+  },
+  "keywords": [
+    "ikwin"
+  ],
+  "author": "Alexander Korzh (appmux)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appmux/ikwin-service-manager/issues"
+  },
+  "homepage": "https://github.com/appmux/ikwin-service-manager#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "mocha": "^3.4.2"
+  }
+}
